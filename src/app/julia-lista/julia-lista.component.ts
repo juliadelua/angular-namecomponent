@@ -33,7 +33,7 @@ export class JuliaListaComponent implements OnInit {
         ementa: this.ementa,
       });
     } else {
-      console.log('items missing');
+      alert('Preencha todos os itens!');
     }
   }
 }
