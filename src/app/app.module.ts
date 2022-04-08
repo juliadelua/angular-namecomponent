@@ -17,7 +17,7 @@ import { JuliaDetalhesComponent } from './julia-detalhes/julia-detalhes.componen
     RouterModule.forRoot([
       { path: '', component: JuliaComponent },
       { path: 'lista', component: JuliaListaComponent },
-      { path: 'lista/index', component: JuliaDetalhesComponent },
+      { path: 'lista/:index', component: JuliaDetalhesComponent },
     ]),
   ],
   declarations: [
