@@ -1,0 +1,35 @@
+<h1>hello</h1>
+
+Codigo: <input type="text" [(ngModel)]="codigo" /> <br />
+Nome da Disciplina: <input type="text" [(ngModel)]="nome" /> <br />
+Dia da Semana: <input type="text" [(ngModel)]="diaDaSemana" /> <br />
+Horário: <input type="text" [(ngModel)]="horario" /> <br />
+Ementa: <input type="textarea" [(ngModel)]="ementa" /> <br />
+<button (click)="adicionar({ codigo, nome, diaDaSemana, horario, ementa })">
+  adicionar
+</button>
+<hr />
+<table>
+  <tr>
+    <th>Código</th>
+    <th>Nome</th>
+    <th>Dia</th>
+    <th>Horário</th>
+    <th>[x]</th>
+  </tr>
+  <tr *ngFor="let disciplina of jdisc.getLista(); index as i">
+    <td>
+      {{ disciplina.codigo }}
+    </td>
+    <td>
+      {{ disciplina.nome }}
+    </td>
+    <td>
+      {{ disciplina.diaDaSemana }}
+    </td>
+    <td>
+      {{ disciplina.horario }}
+    </td>
+    <td style="cursor:pointer;" (click)="jdisc.exclude(i)">[x]</td>
+  </tr>
+</table>

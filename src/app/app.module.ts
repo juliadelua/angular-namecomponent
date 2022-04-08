@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
 import { JuliaComponent } from './julia/julia.component';
-import { ListaComponent } from './lista/lista.component';
+import { JuliaListaComponent } from './julia-lista/julia-lista.component';
+import { JuliaDisciplinasService } from './julia-disciplinas.service';
 
 @NgModule({
   imports: [
@@ -14,11 +15,11 @@ import { ListaComponent } from './lista/lista.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: JuliaComponent },
-      { path: 'nome', component: JuliaComponent },
-      { path: 'lista', component: ListaComponent },
+      { path: 'lista', component: JuliaListaComponent },
     ]),
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, JuliaComponent, JuliaListaComponent],
   bootstrap: [AppComponent],
+  providers: [JuliaDisciplinasService],
 })
 export class AppModule {}
