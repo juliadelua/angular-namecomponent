@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { JuliaComponent } from './julia/julia.component';
 import { JuliaListaComponent } from './julia-lista/julia-lista.component';
 import { JuliaDisciplinasService } from './julia-disciplinas.service';
+import { JuliaDetalhesComponent } from './julia-detalhes/julia-detalhes.component';
 
 @NgModule({
   imports: [
@@ -16,9 +17,15 @@ import { JuliaDisciplinasService } from './julia-disciplinas.service';
     RouterModule.forRoot([
       { path: '', component: JuliaComponent },
       { path: 'lista', component: JuliaListaComponent },
+      { path: 'lista/index', component: JuliaDetalhesComponent },
     ]),
   ],
-  declarations: [AppComponent, JuliaComponent, JuliaListaComponent],
+  declarations: [
+    AppComponent,
+    JuliaComponent,
+    JuliaListaComponent,
+    JuliaDetalhesComponent,
+  ],
   bootstrap: [AppComponent],
   providers: [JuliaDisciplinasService],
 })

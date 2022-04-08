@@ -1,4 +1,4 @@
-<h1>hello</h1>
+<h1>Lista de Disciplinas</h1>
 
 Codigo: <input type="text" [(ngModel)]="codigo" /> <br />
 Nome da Disciplina: <input type="text" [(ngModel)]="nome" /> <br />
@@ -18,7 +18,7 @@ Ementa: <input type="textarea" [(ngModel)]="ementa" /> <br />
     <th>[x]</th>
   </tr>
   <tr *ngFor="let disciplina of jdisc.getLista(); index as i">
-    <td>
+    <td [routerLink]="['/lista/', i]">
       {{ disciplina.codigo }}
     </td>
     <td>
